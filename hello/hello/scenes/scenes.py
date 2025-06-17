@@ -44,33 +44,5 @@ See the Xodex documentation for more advanced scene management and transitions.
 """
 
 from xodex.scenes.manager import register, SceneManager
-from xodex.scenes import Scene
 
 # Register your Scenes here.
-
-
-# @register
-class UIScene(Scene):
-    """UIScene"""
-
-    def __init__(self):
-        super().__init__()
-
-    def _generate_objects_(self):
-        text = self.object.get_object(object_name="XodexText")
-        label = self.object.get_object(object_name="UILABEL")
-        btn = self.object.get_object(object_name="UIBTN")
-
-        label1 = label(master=self._screen, text="My Label")
-        label1.place(x=100, y=200)
-
-        btn1 = btn(master=self._screen, text="Click Me")
-        btn1.place(x=100, y=300)
-
-        yield label1
-        yield btn1
-
-        yield text("Hello", (10, 100))
-
-
-SceneManager().register(UIScene, name="UIScene")

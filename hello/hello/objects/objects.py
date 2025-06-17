@@ -43,13 +43,5 @@ How it works:
 See the Xodex documentation for more advanced usage and patterns.
 """
 
-# from xodex.objects.manager import register
+from xodex.objects.manager import register
 from xodex.objects import make_xodex_object
-from xodex.objects import DrawableObject
-
-from pygameui import Label, Button
-
-# Register your Objects here.
-
-make_xodex_object(Label, base_classes=(DrawableObject,), register=True, name="UILABEL")
-make_xodex_object(Button, base_classes=(DrawableObject,), register=True, name="UIBTN")
