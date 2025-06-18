@@ -1,5 +1,5 @@
 """
-Objects Registration for hello project.
+Objects Registration for HELLO project.
 
 Register your custom game objects here using the @register decorator.
 
@@ -44,4 +44,5 @@ See the Xodex documentation for more advanced usage and patterns.
 """
 
 from xodex.objects.manager import register
-from xodex.objects import make_xodex_object
+
+# Register your hello Objects here.

@@ -1,5 +1,5 @@
 """
-Scene Registration for hello project.
+Scene Registration for HELLO project.
 
 Register your custom scenes here using the @register decorator.
 
@@ -43,6 +43,6 @@ How it works:
 See the Xodex documentation for more advanced scene management and transitions.
 """
 
-from xodex.scenes.manager import register, SceneManager
+from xodex.scenes.manager import register
 
-# Register your Scenes here.
+# Register your hello Scenes here.
