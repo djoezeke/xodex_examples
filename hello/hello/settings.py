@@ -92,7 +92,7 @@ CUSTOM_SETTINGS = {
 
 
 # Main Scene
-MAIN_SCENE = "XodexMainScene"
+MAIN_SCENE = "MainScene"
 
 # --- Documentation ---
 """
