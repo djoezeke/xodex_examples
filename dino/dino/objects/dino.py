@@ -1,9 +1,9 @@
-# from xodex.objects.objects import DrawableObject
-from xodex.objects.animator import Animator
+import pygame
+from xodex.objects.animator import Animator, Anime
 
 
 class DinoDuck(Animator):
-    """Pipe Obstacle"""
+    """Dino Animator"""
 
     def __init__(self, x, y):
         duck = [
@@ -22,7 +22,7 @@ class DinoDuck(Animator):
 
 
 class DinoJump(Animator):
-    """Pipe Obstacle"""
+    """Dino Animator"""
 
     def __init__(self, x, y):
         duck = [
@@ -40,7 +40,7 @@ class DinoJump(Animator):
 
 
 class DinoDead(Animator):
-    """Pipe Obstacle"""
+    """Dino Animator"""
 
     def __init__(self, x, y):
         duck = [
@@ -58,7 +58,7 @@ class DinoDead(Animator):
 
 
 class DinoRun(Animator):
-    """Pipe Obstacle"""
+    """Dino Animator"""
 
     def __init__(self, x, y):
         duck = [
@@ -74,3 +74,16 @@ class DinoRun(Animator):
             on_finish=None,
             pos=(x, y),
         )
+
+
+class Dino(Anime):
+    """Dino"""
+
+    def __init__(self, x: int, y: int, default="run"):
+        animations = {
+            "run": DinoRun(x, y),
+            "dead": DinoDead(x, y),
+            "jump": DinoJump(x, y),
+            "duck": DinoDuck(x, y),
+        }
+        super().__init__(animations, default)

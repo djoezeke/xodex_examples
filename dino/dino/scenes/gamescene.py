@@ -7,6 +7,8 @@ class GameScene(Scene):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         Cactuses = self.object.Cactuses
+        Dino = self.object.Dino
+        self.dino = Dino(40, int(self.height * 0.8))
         self.catuses = Cactuses(self.width, self.height)
 
     def _generate_objects_(self):
@@ -29,6 +31,7 @@ class GameScene(Scene):
         yield cloud3
         yield track
         yield self.catuses
+        yield self.dino
 
     def gameover(self):
         """entergame"""
@@ -58,6 +61,8 @@ class GameScene(Scene):
         Args:
             event (pygame.event.Event): The event to handle.
         """
+        if self.is_tap_event(event):
+            self.dino.play("duck")
         super().handle_scene(event, *args, **kwargs)
 
     def update_scene(self, deltatime: float, *args, **kwargs) -> None:

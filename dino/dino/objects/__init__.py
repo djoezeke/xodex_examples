@@ -47,9 +47,10 @@ from xodex.objects.manager import register
 
 from .background import Track, Cloud
 from .cactus import Cactuses
+from .dino import Dino
 
 # Register your dino Objects here.
-
+register(Dino, name="Dino")
 register(Track, name="Track")
 register(Cloud, name="Cloud")
 register(Cactuses, name="Cactuses")
